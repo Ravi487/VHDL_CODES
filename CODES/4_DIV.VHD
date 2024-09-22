@@ -35,11 +35,12 @@ begin
 			
 			  
 			   if (R3 = (others =>'0')) then 
-				    temp1 <= (to_integer(unsigned(R2))/to_integer(unsigned(R3)));
-					 
-				     R1 <= std_logic_vector(to_unsigned(temp1,19));
-				else
-				 R1 <= (others => '0') ;
+				   
+					 R1 <= (others => '0') ; 
+				     
+				else 
+                                temp1 <= (to_integer(unsigned(R2))/to_integer(unsigned(R3)));
+				R1 <= std_logic_vector(to_unsigned(temp1,19));
 				end if;
 			
 	     
